@@ -155,6 +155,8 @@ def expidition_crew_filling(employee_number, expedition_number):
         leader = group[random.randint(0, len(group)-1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == expedition_number:
+                while (group[j], i) in l_keys:
+                    group[j] = random.randint(1, employee_number)
                 s += f"({group[j]}, {i}, '{leader}');"   
             else:
                 if (group[j], i) not in l_keys:
@@ -242,6 +244,8 @@ def research_crew_filling(employee_number, sample_number):
         instruction = instructions[random.randint(0, len(instructions) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == sample_number:
+                while (group[j], i) in l_keys:
+                    group[j] = random.randint(1, employee_number)
                 s += f"({group[j]}, {i}, '{instruction}');"  
             else:
                 if (group[j], i) not in l_keys:
@@ -270,7 +274,7 @@ def product_filling(sample_number):
 def testing_filling(test_subjects, product_number):
     s = 'INSERT INTO s311288.Testing(ID_Product, ID_Employee, Result) Values '
     results = open("RAW_DATA\\testing_results.txt", 'r', encoding="utf-8").read().splitlines()
-    for i in range(1, product_number+1):
+    for i in range(1, product_number + 1):
         products_num = random.randint(10, 30)
         l_keys = []
         group = []
@@ -280,6 +284,8 @@ def testing_filling(test_subjects, product_number):
         result = results[random.randint(0, len(results) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == product_number:
+                while (group[j], i) in l_keys:
+                    group[j] = random.choice(test_subjects)
                 s += f"({group[j]}, {i}, '{result}');"  
             else:
                 if (group[j], i) not in l_keys:
@@ -295,7 +301,7 @@ def accidents_filling(products_number):
     s = 'INSERT INTO s311288.Accident(ID_Product, Territory, Accident_date, News_release_date, Estimated_damage, Victims, Status) VALUES '
     accident_num = random.randint(10, 20)
     for i in range(accident_num - 1):
-        id_product = random.randint(0, products_number - 1)
+        id_product = random.randint(1, products_number - 1)
         terr = random.choice(locations)
         acc_date = random_date(date(2020, 1, 1), date(2022, 12, 18))
         news_date = random_date(acc_date, date(2022, 12, 19))
@@ -303,7 +309,7 @@ def accidents_filling(products_number):
         victims = random.randint(1000, 500000)
         status = random.choice(accident_statuses)
         s += f"({id_product}, '{terr}', '{acc_date}', '{news_date}', {damage}, {victims}, '{status}'), "
-    id_product = random.randint(0, products_number - 1)
+    id_product = random.randint(1, products_number - 1)
     terr = random.choice(locations)
     acc_date = random_date(date(2020, 1, 1), date(2022, 12, 18))
     news_date = random_date(acc_date, date(2022, 12, 19))
