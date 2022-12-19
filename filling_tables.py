@@ -170,7 +170,7 @@ def equipment_filling(laboratory_number, expidition_number):
     return len(equipment_names)
 
 def equipment_movement_filling(equipment_number):
-    locations= open("DB_lab_4\RAW_DATA\locations.txt", 'r', encoding="utf-8").read().splitlines()
+    locations = open("DB_lab_4\RAW_DATA\locations.txt", 'r', encoding="utf-8").read().splitlines()
     territories = open("DDB_lab_4\RAW_DATA\wild_territory.txt", 'r', encoding="utf-8").read().splitlines()
     s = 'INSERT INTO s311288.Equipment_movement(ID_Equipment, Start_point, End_point, Start_time, End_time VALUES '
     movements_num = (4000, 5000)
@@ -201,3 +201,19 @@ def equipment_movement_filling(equipment_number):
     stream = open("DB_lab_4\INSERTS\insert_movements.txt", 'w')
     stream.write(s)
     return movements_num
+
+def sample_filling(exp_number):
+    sample_names_data = open("DB_lab_4\RAW_DATA\sample_names.txt", 'r', encoding="utf-8").read().splitlines()
+    s = 'INSERT INTO s311288.Sample(Name, Weight, Detection_timestamp, ID_Expedition) VALUES '
+    for i in range(len(sample_names_data) - 1):
+        weight = random.uniform(2.0, 20.0)
+        detect_time = gen_datetime()
+        id_exp = random.randint(1, exp_number)
+        s += f'({sample_names_data[i]}, {weight}, {detect_time}, {id_exp}), '
+    weight = random.uniform(2.0, 20.0)
+    detect_time = gen_datetime()
+    id_exp = random.randint(1, exp_number)
+    s += f'({sample_names_data[-1]}, {weight}, {detect_time}, {id_exp});'
+    stream = open("DB_lab_4\INSERTS\insert_samples.txt", 'w')
+    stream.write(s)
+    return len(sample_names_data)
