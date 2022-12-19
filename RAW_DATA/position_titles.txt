@@ -1,0 +1,92 @@
+Head of company
+Laboratory Director
+Technical Supervisor
+General Supervisor
+Pathologist
+Medical Laboratory Scientist
+Medical Technologist
+Clinical Laboratory Scientist
+Clinical Laboratory Technician
+Medical Laboratory Technician
+Phlebotomist
+Pathology Assistant
+Cytogeneticist
+Cytotechnologist
+Histotechnologist
+Histologic technician
+Head of company
+BoD member
+Personal Assistant
+Brigadier
+Сonstruction worker
+Senior Researcher
+Middle Researcher
+Junior Researcher
+Research Assistant
+Scientist geneticist
+Breeder consultant
+Cardiovascular pharmacologist
+Clinical pharmacologist
+Neuropharmacologist
+Psychopharmacologist
+Veterinary pharmacologist
+Firefighter
+Policeman
+Paramedic
+Sniper
+Infantryman
+Tankman
+Helicopter pilot
+Plane pilot
+Train driver
+Car driver
+Administrative assistant
+Bookkeeper
+Receptionist
+Human resources manager
+Marketing positions
+Marketing manager
+Graphic designer
+Product manager
+Copywriter
+Leadership positions
+Team leader
+Coordinator
+Manager
+Chief executive officer
+Chief operating officer
+Chief financial officers
+Chief information officer
+Chief marketing officer
+Information technology manager
+Sales manager
+Business analyst
+Software engineer
+General Counsel
+Arbitrator
+Case Manager
+Legal Analyst
+Mediator
+Legal Assistant
+Legal Aide
+Legal Consultant
+Corporate Attorney
+Legal Secretary
+Publicist
+Public Relations Manager
+Public Information Specialist
+Communications Coordinator
+Internal Communications Specialist
+Media Relations Manager
+External Communications Director
+Media Relations Assistant
+Public Affairs Coordinator
+Strategic Communications Director
+Virologist
+Firefighter
+Policeman
+Paramedic
+Sniper
+Infantryman
+Tankman
+Test subject
