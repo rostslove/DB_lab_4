@@ -284,13 +284,13 @@ def testing_filling(test_subjects, product_number):
         result = results[random.randint(0, len(results) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == product_number:
-                while (group[j], i) in l_keys:
+                while (i, group[j]) in l_keys:
                     group[j] = random.choice(test_subjects)
-                s += f"({group[j]}, {i}, '{result}');"  
+                s += f"({i}, {group[j]}, '{result}');"  
             else:
-                if (group[j], i) not in l_keys:
-                    l_keys.append((group[j], i))
-                    s += f"({group[j]}, {i}, '{result}'), "        
+                if (i, group[j]) not in l_keys:
+                    l_keys.append((i, group[j]))
+                    s += f"({i}, {group[j]}, '{result}'), "        
     stream = open("INSERTS\insert_testing.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
