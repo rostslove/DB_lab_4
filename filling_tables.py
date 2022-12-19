@@ -299,7 +299,7 @@ def accidents_filling(products_number):
     locations = open("RAW_DATA\locations.txt", 'r', encoding="utf-8").read().splitlines()
     accident_statuses = open("RAW_DATA\\accident_statuses.txt", 'r', encoding="utf-8").read().splitlines()
     s = 'INSERT INTO s311288.Accident(ID_Product, Territory, Accident_date, News_release_date, Estimated_damage, Victims, Status) VALUES '
-    accident_num = random.randint(10, 20)
+    accident_num = random.randint(50, 100)
     for i in range(accident_num - 1):
         id_product = random.randint(1, products_number - 1)
         terr = random.choice(locations)
