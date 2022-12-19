@@ -126,7 +126,7 @@ def expedition_filling():
             com_date = random_date(date(2020, 1, 1), term_date)
         pos =  expedition_positions_data[random.randint(0, len(expedition_positions_data) - 1)]
         ter = territories[random.randint(0, len(territories) - 1)]
-        if not term_date:
+        if term_date != None:
             s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}'), "
         else:
             s += f"(NULL, '{com_date}', '{pos}', '{status}', '{ter}'), "
@@ -137,7 +137,7 @@ def expedition_filling():
         term_date = random_date(date(2020, 1, 1), date(2022, 12, 19))
         com_date = random_date(date(2020, 1, 1), term_date)
     pos =  expedition_positions_data[random.randint(0, len(expedition_positions_data) - 1)]
-    if not term_date:
+    if term_date != None:
         s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}');"
     else:
         s += f"(NULL, '{com_date}', '{pos}', '{status}', '{ter}');"
