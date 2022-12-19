@@ -1,1 +1,1 @@
-INSERT INTO s311288.Product(Class, Version, ID_Sample) Values ('Tyrant', '6.24', 60), ('Nemesis', '12.72', 83), ('Vampire', '7.7', 158), ('Werewolf', '16.65', 223), ('Crocodile', '11.24', 152), ('Biomass', '14.22', 156), ('Chainsaw monster', '4.39', 4), ('Veronica', '10.82', 133);
+INSERT INTO s311288.Product(Class, Version, ID_Sample) Values ('Tyrant', '18.06', 28), ('Nemesis', '9.19', 28), ('Vampire', '6.61', 14), ('Werewolf', '10.5', 13), ('Crocodile', '14.25', 94), ('Biomass', '7.75', 33), ('Chainsaw monster', '9.68', 81), ('Veronica', '2.96', 82);

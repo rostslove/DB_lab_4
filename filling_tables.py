@@ -28,7 +28,7 @@ def employee_filling(position_number):
     first_names_data = open("DB_lab_4\RAW_DATA\employee_first_names.txt", 'r', encoding="utf-8").read().splitlines()
     last_names_data = open("DB_lab_4\RAW_DATA\employee_last_names.txt", 'r', encoding="utf-8").read().splitlines()
     s = 'INSERT INTO s311288.Employee(Name, Surname, ID_Position) VALUES '
-    s += '(Ozwell, Spencer, 1), '
+    s += "('Ozwell', 'Spencer', 1), "
     employee_number = random.randint(4000, 5000)
     test_subjects = []
     spec_ops = []
