@@ -130,9 +130,9 @@ def expedition_filling():
         com_date = random_date(date(2020, 1, 1), term_date)
     pos =  expedition_positions_data[random.randint(0, len(expedition_positions_data) - 1)]
     if not term_date:
-        s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}'), "
+        s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}');"
     else:
-        s += f"('NULL', '{com_date}', '{pos}', '{status}', '{ter}'), "
+        s += f"('NULL', '{com_date}', '{pos}', '{status}', '{ter}');"
     stream = open("INSERTS\insert_expeditions.txt", 'w', encoding="utf-8")
     stream.write(s)
     return expedition_number
@@ -157,7 +157,7 @@ def expidition_crew_filling(employee_number, expedition_number):
 
 def equipment_filling(laboratory_number, expedition_number):
     equipment_names = open("RAW_DATA\equipment_names.txt", 'r', encoding="utf-8").read().splitlines()
-    s = 'INSERT INTO s311288.Equipment(Name, Cost, ID_laboratory, ID_Expedition VALUES '
+    s = 'INSERT INTO s311288.Equipment(Name, Cost, ID_laboratory, ID_Expedition) VALUES '
     for i in range(len(equipment_names) - 1):
         cost = random.randint(0, 100000)
         id_lab = random.randint(1, laboratory_number)
@@ -174,7 +174,7 @@ def equipment_filling(laboratory_number, expedition_number):
 def equipment_movement_filling(equipment_number):
     locations = open("RAW_DATA\locations.txt", 'r', encoding="utf-8").read().splitlines()
     territories = open("RAW_DATA\wild_territory.txt", 'r', encoding="utf-8").read().splitlines()
-    s = 'INSERT INTO s311288.Equipment_movement(ID_Equipment, Start_point, End_point, Start_time, End_time VALUES '
+    s = 'INSERT INTO s311288.Equipment_movement(ID_Equipment, Start_point, End_point, Start_time, End_time) VALUES '
     movements_num = random.randint(4000, 5000)
     start_point, end_point = '', ''
     for i in range(movements_num - 1):
