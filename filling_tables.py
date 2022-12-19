@@ -56,10 +56,7 @@ def documents_filling():
     for i in range(documents_number - 1):
         doc_type = documents_types_data[random.randint(0, len(documents_types_data) - 1)]
         date_doc = random_date(date(2020, 1, 1), date(2022, 12, 19))
-        if i % 2000 == 0:
-            s += f"('{doc_type}'), "
-        else:
-            s += f"('{doc_type}', {date_doc}), "
+        s += f"('{doc_type}', {date_doc}), "
     doc_type = documents_types_data[random.randint(0, len(documents_types_data) - 1)]
     s += f"('{doc_type}');"
     stream = open("DB_lab_4\INSERTS\insert_documents.txt", 'w', encoding="utf-8")
