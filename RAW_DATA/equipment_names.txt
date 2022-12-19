@@ -313,3 +313,64 @@ Sikorsky YR-4B Hoverfly (Ambulance/Sea Patrol helicopter)
 Sikorsky R-5A (Rescue/Reconnaissance helicopter)
 Platt-LePage XR-1 (Experimental helicopter)
 Kellet Cobra XX-9 (Attack helicopter)
+Safety Gear
+Beakers
+Reagent Bottle
+Flasks
+Erlenmeyer Flask
+Round Bottom Flask
+Volumetric Flask
+Retort Flask
+Büchner Flask
+Pear-Shaped Flask
+Kjeldahl Flask.
+Schlenk Flask
+Test Tube
+Boiling Tube
+Centrifuge Tube
+NMR Tube
+Thistle Tube.
+Capillary Tube
+Fusion Tube
+Thiele Tube
+Test Tube holder
+Test Tube Racks
+Centrifuge Machine
+Mechanical Shaker
+Magnetic Stirrer
+Filter Paper
+Funnel
+Filter Funnel
+Separatory Funnel
+Dropping Funnel
+Büchner Funnel
+Mortar and Pestle
+Wash Bottle
+Watch glass
+Crucibles
+Tongs
+Ring stands
+Condensers
+Liebig Condenser
+Graham Condenser
+Dewar Condenser
+Soxhlet Apparatus
+Chromatography Column
+Gas Syringe
+Pasture Pipette
+Graduated Cylinder
+Graduated Pipette
+Volumetric Pipette
+Burette
+Spatulas 
+Laboratory Thermometer
+Bunsen Burners
+Tripod
+Wire Mesh
+Evaporating dish
+Petri dish
+Water Bath
+Kipp’s Apparatus
+Melting Point Apparatus
+Digital Balance
+Digital Colorimeter
