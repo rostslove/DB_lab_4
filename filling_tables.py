@@ -67,12 +67,16 @@ def documents_filling():
 def documents_participants_filling(employee_number, documents_number):
     s = 'INSERT INTO s311288.Document_participants(ID_Employee, ID_Document) VALUES '
     for i in range(1, documents_number):
+        l_keys = []
         num_participants = random.randint(1, 5)
         for j in range(num_participants):
             id_employee = random.randint(1, employee_number)
-            s += f"({id_employee}, {i}), "
+            if (id_employee, i) not in l_keys:
+                l_keys.append((id_employee, i))
+                s += f"({id_employee}, {i}), "
     id_employee = random.randint(1, employee_number)
-    s += f"({id_employee}, {documents_number});"
+    if (id_employee, i) not in l_keys:
+        s += f"({id_employee}, {documents_number});"
     stream = open("INSERTS\insert_documents_participants.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -93,12 +97,16 @@ def laboratory_filling():
 def employee_in_lab_filling(employee_number, laboratory_number):
     s = 'INSERT INTO s311288.Employee_in_lab(ID_Employee, ID_Laboratory) VALUES '
     for i in range(1, employee_number):
+        l_keys = []
         num_labs = random.randint(1, laboratory_number)
         for j in range(num_labs):
             id_lab = random.randint(1, laboratory_number)
-            s += f"({i}, {id_lab}), "
+            if (i, id_lab) not in l_keys:
+                l_keys.append((i, id_lab))
+                s += f"({i}, {id_lab}), "
     id_lab = random.randint(1, laboratory_number)
-    s += f"({employee_number}, {id_lab});"
+    if (i, id_lab) not in l_keys:
+        s += f"({employee_number}, {id_lab});"
     stream = open("INSERTS\insert_employee_in_lab.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -140,6 +148,7 @@ def expedition_filling():
 def expidition_crew_filling(employee_number, expedition_number):
     s = 'INSERT INTO s311288.Expedition_crew(ID_Employee, ID_Expedition, Leader_ID) VALUES '
     for i in range(1, expedition_number + 1):
+        l_keys = []
         expiditors_num = random.randint(10, 30)
         group = []
         for j in range(expiditors_num):
@@ -148,9 +157,12 @@ def expidition_crew_filling(employee_number, expedition_number):
         leader = group[random.randint(0, len(group)-1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == expedition_number:
-                s += f"({group[j]}, {i}, {leader});"  
+                if (group[j], i) not in l_keys:
+                    s += f"({group[j]}, {i}, {leader});"  
             else:
-                s += f"({group[j]}, {i}, {leader}), "
+                if (group[j], i) not in l_keys:
+                    l_keys.append((group[j], i))
+                    s += f"({group[j]}, {i}, {leader}), "
     stream = open("INSERTS\insert_expedition_crew.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -226,15 +238,19 @@ def research_crew_filling(employee_number, sample_number):
     for i in range(1, sample_number+1):
         samples_num = random.randint(10, 30)
         group = []
+        l_keys = []
         for j in range(samples_num):
             id_emp = random.randint(1, employee_number)
             group.append(id_emp)
         instruction = instructions[random.randint(0, len(instructions) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == sample_number:
-                s += f"({group[j]}, {i}, '{instruction}');"
+                if (group[j], i) not in l_keys:
+                    s += f"({group[j]}, {i}, {instruction});"  
             else:
-                s += f"({group[j]}, {i}, '{instruction}'), "
+                if (group[j], i) not in l_keys:
+                    l_keys.append((group[j], i))
+                    s += f"({group[j]}, {i}, '{instruction}'), "
     stream = open("INSERTS\insert_research_crew.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -260,6 +276,7 @@ def testing_filling(test_subjects, product_number):
     results = open("RAW_DATA\\testing_results.txt", 'r', encoding="utf-8").read().splitlines()
     for i in range(1, product_number+1):
         products_num = random.randint(10, 30)
+        l_keys = []
         group = []
         for j in range(products_num):
             id_emp = random.choice(test_subjects)
@@ -267,9 +284,12 @@ def testing_filling(test_subjects, product_number):
         result = results[random.randint(0, len(results) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == product_number:
-                s += f"({group[j]}, {i}, '{result}');"
+                if (group[j], i) not in l_keys:
+                    s += f"({group[j]}, {i}, '{result}');"  
             else:
-                s += f"({group[j]}, {i}, '{result}'), "
+                if (group[j], i) not in l_keys:
+                    l_keys.append((group[j], i))
+                    s += f"({group[j]}, {i}, '{result}'), "        
     stream = open("INSERTS\insert_testing.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -304,14 +324,18 @@ def spec_ops_filling(accident_num, spec_ops):
     instructions = open("RAW_DATA\instructions.txt", 'r', encoding="utf-8").read().splitlines()
     s = 'INSERT INTO s311288.Spec_ops(ID_Employee, ID_Accident, Instructions) VALUES '
     for i in range(1, accident_num):
+        l_keys = []
         group_num = random.randint(10, len(spec_ops))
         for j in range(group_num):
             id_emp = random.choice(spec_ops)
             instructs = random.choice(instructions)
-            s += f"({id_emp}, {i}, '{instructs}'), "
+            if (id_emp, i) not in l_keys:
+                l_keys.append((id_emp, i))
+                s += f"({id_emp}, {i}, '{instructs}'), "
     id_emp = random.choice(spec_ops)
     instructs = random.choice(instructions)
-    s += f"({id_emp}, {accident_num}, '{instructs}');"
+    if (id_emp, i) not in l_keys:
+        s += f"({id_emp}, {accident_num}, '{instructs}');"
     stream = open("INSERTS\insert_spec_ops.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
