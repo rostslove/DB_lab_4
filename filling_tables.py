@@ -75,8 +75,7 @@ def documents_participants_filling(employee_number, documents_number):
                 l_keys.append((id_employee, i))
                 s += f"({id_employee}, {i}), "
     id_employee = random.randint(1, employee_number)
-    if (id_employee, i) not in l_keys:
-        s += f"({id_employee}, {documents_number});"
+    s += f"({id_employee}, {documents_number});"
     stream = open("INSERTS\insert_documents_participants.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -105,8 +104,7 @@ def employee_in_lab_filling(employee_number, laboratory_number):
                 l_keys.append((i, id_lab))
                 s += f"({i}, {id_lab}), "
     id_lab = random.randint(1, laboratory_number)
-    if (i, id_lab) not in l_keys:
-        s += f"({employee_number}, {id_lab});"
+    s += f"({employee_number}, {id_lab});"
     stream = open("INSERTS\insert_employee_in_lab.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
@@ -157,8 +155,7 @@ def expidition_crew_filling(employee_number, expedition_number):
         leader = group[random.randint(0, len(group)-1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == expedition_number:
-                if (group[j], i) not in l_keys:
-                    s += f"({group[j]}, {i}, {leader});"  
+                s += f"({group[j]}, {i}, '{leader}');"   
             else:
                 if (group[j], i) not in l_keys:
                     l_keys.append((group[j], i))
@@ -245,8 +242,7 @@ def research_crew_filling(employee_number, sample_number):
         instruction = instructions[random.randint(0, len(instructions) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == sample_number:
-                if (group[j], i) not in l_keys:
-                    s += f"({group[j]}, {i}, {instruction});"  
+                s += f"({group[j]}, {i}, '{instruction}');"  
             else:
                 if (group[j], i) not in l_keys:
                     l_keys.append((group[j], i))
@@ -284,8 +280,7 @@ def testing_filling(test_subjects, product_number):
         result = results[random.randint(0, len(results) - 1)]
         for j in range(len(group)):
             if j == len(group) - 1 and i == product_number:
-                if (group[j], i) not in l_keys:
-                    s += f"({group[j]}, {i}, '{result}');"  
+                s += f"({group[j]}, {i}, '{result}');"  
             else:
                 if (group[j], i) not in l_keys:
                     l_keys.append((group[j], i))
@@ -334,8 +329,7 @@ def spec_ops_filling(accident_num, spec_ops):
                 s += f"({id_emp}, {i}, '{instructs}'), "
     id_emp = random.choice(spec_ops)
     instructs = random.choice(instructions)
-    if (id_emp, i) not in l_keys:
-        s += f"({id_emp}, {accident_num}, '{instructs}');"
+    s += f"({id_emp}, {accident_num}, '{instructs}');"
     stream = open("INSERTS\insert_spec_ops.txt", 'w', encoding="utf-8")
     stream.write(s)
     return
