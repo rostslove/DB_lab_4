@@ -217,3 +217,45 @@ def sample_filling(exp_number):
     stream = open("DB_lab_4\INSERTS\insert_samples.txt", 'w')
     stream.write(s)
     return len(sample_names_data)
+
+def accidents_filling(products_number):
+    locations = open("DB_lab_4\RAW_DATA\locations.txt", 'r', encoding="utf-8").read().splitlines()
+    accident_statuses = open("DB_lab_4\RAW_DATA\accident_statuses.txt", 'r', encoding="utf-8").read().splitlines()
+    s = 'INSERT INTO s311288.Accident(ID_Product, Territory, Accident_date, News_release_date, Estimated_damage, Victims, Status) VALUES '
+    accident_num = random.randint(10, 20)
+    for i in range(accident_num - 1):
+        id_product = random.randint(0, len(products_number) - 1)
+        terr = random.choice(locations)
+        acc_date = random_date(datetime.date(2020, 1, 1), datetime.date(2022, 12, 18))
+        news_date = random_date(acc_date, datetime.date(2022, 12, 19))
+        damage = random.randint(10000000, 100000000)
+        victims = random.randint(1000, 500000)
+        status = random.choice(accident_statuses)
+        s += f'({id_product}, {terr}, {acc_date}, {news_date}, {damage}, {victims}, {status}), '
+    id_product = random.randint(0, len(products_number) - 1)
+    terr = random.choice(locations)
+    acc_date = random_date(datetime.date(2020, 1, 1), datetime.date(2022, 12, 18))
+    news_date = random_date(acc_date, datetime.date(2022, 12, 19))
+    damage = random.randint(10000000, 100000000)
+    victims = random.randint(1000, 500000)
+    status = random.choice(accident_statuses)
+    s += f'({id_product}, {terr}, {acc_date}, {news_date}, {damage}, {victims}, {status});'
+    stream = open("DB_lab_4\INSERTS\insert_accidents.txt", 'w')
+    stream.write(s)
+    return len(accident_num)
+
+def spec_ops_filling(accident_num, spec_ops):
+    instructions = open("DB_lab_4\RAW_DATA\instructions.txt", 'r', encoding="utf-8").read().splitlines()
+    s = 'INSERT INTO s311288.Spec_ops(ID_Employee, ID_Accident, Instructions) VALUES '
+    for i in range(1, accident_num):
+        group_num = random.randint(10, len(spec_ops))
+        for j in range(group_num):
+            id_emp = random.choice(spec_ops)
+            instructs = random.choice(instructions)
+            s += f'({id_emp}, {i}, {instructs}), '
+    id_emp = random.choice(spec_ops)
+    instructs = random.choice(instructions)
+    s += f'({id_emp}, {accident_num}, {instructs});'
+    stream = open("DB_lab_4\INSERTS\insert_accidents.txt", 'w')
+    stream.write(s)
+    return
