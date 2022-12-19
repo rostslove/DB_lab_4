@@ -32,4 +32,284 @@ Plantain
 Sulfuric acid
 Adrenaline
 Tonic
-
+Antiaircraft gun
+Antitank weapon
+Big Bertha
+cannon
+French 75
+Vulcan automatic cannon
+coastal artillery
+German 88
+Maxim machine gun
+Mortar
+Panzerfaust
+Panzerschreck
+Paris Gun
+Schwarzlose machine gun
+anthrax
+plague
+Q fever
+ricin
+smallpox
+yellow rain
+adamsite
+diphosgene
+hydrogen cyanide
+lewisite
+nerve gas
+phosgene
+tear gas
+chloropicrin
+bola
+boomerang
+bow and arrow
+crossbow
+longbow
+grapeshot
+flamethrower
+Greek fire
+sling
+spear
+spear-thrower
+bayonet
+club
+dagger
+halberd
+lance
+pike
+quarterstaff
+sabre
+sword
+depth charge
+dirty bomb
+grenade
+improvised explosive device
+mine
+shrapnel
+PETN
+RDX
+trinitrotoluene (TNT)
+antiballistic missile
+ICBM
+Lance missile
+Peacekeeper missile
+Minuteman missile
+Nike missile
+Polaris missile
+Poseidon missile
+torpedo
+Trident missile
+V-2 missile
+Tomahawk
+V-1 missile
+bazooka
+Congreve rocket
+air gun
+blowgun
+blunderbuss
+carbine
+Spencer carbine
+Gatling gun
+handgun
+pistol
+revolver
+derringer
+harquebus
+musket
+rifle
+Dreyse rifle
+Lee-Enfield rifle
+Mauser rifle
+Springfield rifle
+shotgun
+handgun
+pistol
+semiautomatic pistol
+Luger pistol
+revolver
+rifle
+assault rifle
+ArmaLite rifle
+M16 rifle
+Garand rifle
+repeating rifle
+Springfield rifle
+handgun
+machine gun
+Bren machine gun
+Browning automatic rifle
+Hotchkiss machine gun
+MG42
+MAG machine gun
+Maxim machine gun
+Schwarzlose machine gun
+rifle
+assault rifle
+M16 rifle
+Browning automatic rifle
+submachine gun
+Sten gun
+Thompson submachine gun
+Uzi submachine gun
+intermediate-range nuclear weapons
+tactical nuclear weapon
+thermonuclear bomb
+atomic bomb
+neutron bomb
+weapon of mass destruction
+battering ram
+Big Bertha
+cannon
+French 75
+catapult
+onager
+culverin
+German 88
+ram
+Vulcan automatic cannon
+Mass Shotgun
+Marine Sidearm
+Hyper Light Blaster
+Rubensteins Monster
+Particulator
+AK-47
+Megahand
+Heroine
+Gunderfury
+AU Gun
+Vulcan Cannon
+Finished gun
+Mourning Star
+Elimentaler
+AKEY-47
+Casey
+Makeshift Cannon
+BSG
+Prototype Railgun
+Blasphemy
+The Exotic
+Fightsabre
+Yari Launcher
+Black Hole Gun
+Gunther
+F-86A	Fighter	X
+F2A	Multirole Fighter	IV
+F2F	Multirole Fighter	II
+F2G	Multirole Fighter	VIII
+F3F	Multirole Fighter	III
+F4F	Multirole Fighter	V
+F4U-1	Multirole Fighter	VI
+F4U-4	Multirole Fighter	VII
+F6U	Multirole Fighter	IX
+F7U	Multirole Fighter	X
+FJ-1	Fighter	XI
+Hawk 75M	Fighter	III
+P-12	Multirole Fighter	I
+P-23	Fighter	II
+P-36	Fighter	IV
+P-40	Fighter	V
+P-51A	Fighter	VI
+P-51D	Fighter	VII
+P-51H	Fighter	VIII
+XF4F-3	Premium Fighter	IV
+XF4U-1	Premium Fighter	V
+T1 Cunningham	Light	I
+M2 Light Tank	Light	II
+T1E6	Light	II
+T2 Light Tank	Light	II
+T7 Combat Car	Light	II
+M3 Stuart	Light	III
+M22 Locust	Light	III
+MTLS-1G14	Light	III
+M5 Stuart	Light	IV
+M24 Chaffee	Light	V
+M7	Light	V
+T37	Light	VI
+T21	Light	VI
+M24E2 Super Chaffee	Light	VI
+T71 CMCD	Light	VII
+T71 DA	Light	VII
+M41 Walker Bulldog	Light	VIII
+T92	Light	VIII
+T49	Light	IX
+XM551 Sheridan	Light	X
+T2 Medium Tank	Medium	II
+M2 Medium Tank	Medium	III
+M3 Lee	Medium	IV
+M4 Sherman	Medium	V
+M4 Improved	Medium	V
+M4A2E4 Sherman	Medium	V
+Ram II	Medium	V
+M4A3E8 Sherman	Medium	VI
+M4A3E2 Sherman Jumbo	Medium	VI
+M4A3E8 Fury	Medium	VI
+M4A3E8 Thunderbolt VII	Medium	VI
+T20	Medium	VII
+T26E3 Eagle 7	Medium	VII
+T23E3	Medium	VII
+T69	Medium	VIII
+T23 (Removed)	Medium	VIII
+M26 Pershing	Medium	VIII
+T25 Pilot Number 1	Medium	VIII
+TL-1 LPC	Medium	VIII
+T42	Medium	VIII
+M46 Patton KR	Medium	VIII
+T26E4 SuperPershing	Medium	VIII
+T95E2	Medium	VIII
+T54E1	Medium	IX
+M46 Patton	Medium	IX
+M48A1 Patton	Medium	X
+M60	Medium	X
+T95E6	Medium	X
+T1 Heavy Tank	Heavy	V
+T14	Heavy	V
+M6	Heavy	VI
+T29	Heavy	VII
+T32	Heavy	VIII
+Chrysler K GF	Heavy	VIII
+T26E5	Heavy	VIII
+M6A2E1	Heavy	VIII
+T34	Heavy	VIII
+T34 B	Heavy	VIII
+M103	Heavy	IX
+T57 Heavy Tank	Heavy	X
+T110E5	Heavy	X
+T3 HMC	Tank Destroyer	II
+T56 GMC	Tank Destroyer	III
+M8A1	Tank Destroyer	IV
+T40	Tank Destroyer	IV
+T67	Tank Destroyer	V
+M10 Wolverine	Tank Destroyer	V
+M18 Hellcat	Tank Destroyer	VI
+M36 Jackson	Tank Destroyer	VI
+T25/2	Tank Destroyer	VII
+T25 AT	Tank Destroyer	VII
+M56 Scorpion	Tank Destroyer	VII
+T28 Concept (Campaign)	Tank Destroyer	VII
+Super Hellcat	Tank Destroyer	VII
+T28 Prototype	Tank Destroyer	VIII
+T28	Tank Destroyer	VIII
+TS-5	Tank Destroyer	VIII
+T30	Tank Destroyer	IX
+T95	Tank Destroyer	IX
+T110E4	Tank Destroyer	X
+T110E3	Tank Destroyer	X
+T57 (Removed)	SPG	II
+T1 HMC	SPG	II
+M7 Priest	SPG	III
+T18 HMC	SPG	III
+M37	SPG	IV
+T82 HMC	SPG	IV
+M41 HMC	SPG	V
+M44	SPG	VI
+M12	SPG	VII
+M40/M43	SPG	VIII
+M53/M55	SPG	IX
+T92 HMC	SPG	X
+Kellet KD-1A (La Cierva C.30A) (General Use Autogyro)
+Sikorsky VS-300 (Experimental helicopter)
+Sikorsky R-4B Hoverfly (General Applications helicopter)
+Sikorsky YR-4B Hoverfly (Ambulance/Sea Patrol helicopter)
+Sikorsky R-5A (Rescue/Reconnaissance helicopter)
+Platt-LePage XR-1 (Experimental helicopter)
+Kellet Cobra XX-9 (Attack helicopter)
