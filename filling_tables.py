@@ -121,7 +121,7 @@ def expedition_filling():
         if not term_date:
             s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}'), "
         else:
-            s += f"('NULL', '{com_date}', '{pos}', '{status}', '{ter}'), "
+            s += f"(NULL, '{com_date}', '{pos}', '{status}', '{ter}'), "
     status = expedition_statuses_data[random.randint(0, len(expedition_statuses_data) - 1)]
     com_date = random_date(date(2020, 1, 1), date(2022, 12, 19))
     term_date = None
@@ -132,7 +132,7 @@ def expedition_filling():
     if not term_date:
         s += f"('{term_date}', '{com_date}', '{pos}', '{status}', '{ter}');"
     else:
-        s += f"('NULL', '{com_date}', '{pos}', '{status}', '{ter}');"
+        s += f"(NULL, '{com_date}', '{pos}', '{status}', '{ter}');"
     stream = open("INSERTS\insert_expeditions.txt", 'w', encoding="utf-8")
     stream.write(s)
     return expedition_number
@@ -256,7 +256,7 @@ def product_filling(sample_number):
 
 
 def testing_filling(test_subjects, product_number):
-    s = 'INSERT INTO s311288.Testing(ID_Product, ID_Employee, Results) Values '
+    s = 'INSERT INTO s311288.Testing(ID_Product, ID_Employee, Result) Values '
     results = open("RAW_DATA\\testing_results.txt", 'r', encoding="utf-8").read().splitlines()
     for i in range(1, product_number+1):
         products_num = random.randint(10, 30)
